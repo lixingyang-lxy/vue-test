@@ -7,7 +7,7 @@
           <th
             v-for="(column, index) in tableTools.columns"
             :key="index + 'tableTools'"
-            @click="$emit('sortBy', $event, column.key)"
+            @click="sort($event, column.key)"
           >
             {{ column.label }}
           </th>
@@ -41,6 +41,16 @@ export default {
         return [];
       },
       required: true
+    }
+  },
+  methods: {
+    sort(e, key) {
+      let tb = this.tableData.concat([])
+      this.$nextTick(() => {
+        console.log(tb.sort((a, b)=>{
+          return a[key] < b[key]
+        }))
+      })
     }
   },
   data() {
