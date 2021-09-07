@@ -1,7 +1,8 @@
 <template>
   <div>
     <!-- <input type="text" :value="value" @input="test" /> -->
-    <input type="checkbox" :checked="checked" @change="test" />
+    <input type="checkbox" :checked="checked" @change="test" /> 
+    <!-- checked = $event -->
     <!-- <input type="button" value="click" /> -->
   </div>
 </template>
@@ -23,6 +24,7 @@ export default {
   },
   methods: {
     test(e) {
+      debugger
       this.$emit("change", e.target.checked);
       this.$listeners.test('i am child')
     },

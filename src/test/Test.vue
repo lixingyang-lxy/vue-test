@@ -1,7 +1,12 @@
 <template>
   <div>
     <!-- <CustomInput v-model="msg" @click.native="test" /> -->
-    <CustomInput v-model="msg" @test="parentTest" @click.native="test" />
+    <CustomInput
+      v-model="msg"
+      @change="handleChange"
+      @test="parentTest"
+      @click.native="nativeClick"
+    />
   </div>
 </template>
 
@@ -14,11 +19,14 @@ export default {
     };
   },
   methods: {
-    test() {
-      console.log("click test");
+    handleChange(value) {
+      console.log("emit: " + value);
     },
     parentTest(content) {
       console.log(this, "content: " + content);
+    },
+    nativeClick() {
+      console.log("you clicked child");
     },
   },
   components: {
