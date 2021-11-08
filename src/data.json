@@ -2,37 +2,44 @@
   "tableData": [
     {
       "date": "2016-05-02",
-      "name": "关羽",
+      "name": "刘志军",
+      "age": 20,
       "address": "上海市普陀区金沙江路 1518 弄"
     },
     {
       "date": "2016-05-04",
-      "name": "刘备",
+      "name": "刘小军",
+      "age": 20,
       "address": "上海市普陀区金沙江路 1517 弄"
     },
     {
       "date": "2016-05-04",
       "name": "张飞",
+      "age": 20,
       "address": "上海市普陀区金沙江路 1517 弄"
     },
     {
       "date": "2016-05-04",
       "name": "林彪",
+      "age": 20,
       "address": "上海市普陀区金沙江路 1517 弄"
     },
     {
       "date": "2016-05-04",
       "name": "毛泽东",
+      "age": 20,
       "address": "上海市普陀区金沙江路 1517 弄"
     },
     {
       "date": "2016-05-04",
       "name": "海子",
+      "age": 20,
       "address": "上海市普陀区金沙江路 1517 弄"
     },
     {
       "date": "2016-05-04",
       "name": "王志军",
+      "age": 20,
       "address": "上海市普陀区金沙江路 1517 弄"
     }
   ],
@@ -42,15 +49,27 @@
       {
         "key": "date",
         "label": "日期",
-        "fixed": true
+        "fixed": true,
+        "rowspan": 2
       },
       {
-        "key": "name",
-        "label": "姓名"
+        "key": "info",
+        "label": "个人信息",
+        "colspan": 2,
+        "children": [{
+          "key": "name",
+          "label": "名字",
+          "rowspan": 1
+        }, {
+          "key": "age",
+          "label": "年龄",
+          "rowspan": 1
+        }]
       },
       {
         "key": "address",
-        "label": "地址"
+        "label": "地址",
+        "rowspan": 2
       }
     ]
   }

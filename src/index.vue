@@ -3,6 +3,7 @@
     <v-table
       :tableTools="tableTools"
       :tableData="tableData"
+      :customMerge="customMerge"
       />
   </div>
 </template>
@@ -14,7 +15,8 @@ export default {
   data() {
     return {
       tableTools: this.$assistData.tableTools,
-      tableData: this.$assistData.tableData
+      tableData: this.$assistData.tableData,
+      customMerge: true,
     }
   },
   components: {
